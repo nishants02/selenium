@@ -53,9 +53,11 @@ public class Alerts {
         driver.findElement(By.xpath("//button[@onclick='myPromp()']")).click();
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert4 = driver.switchTo().alert();
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         System.out.println("Alert 4 text is : " + alert4.getText());
-        alert.sendKeys("Text added");
+        alert4.sendKeys("Text added");
+        Thread.sleep(2000);
+        alert4.accept();
 
 
 
